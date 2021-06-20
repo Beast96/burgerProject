@@ -1,9 +1,11 @@
-public class BasicBurger extends Burger {
+package model;
+
+public class DeluxeBurger extends Burger {
     private String rollType;
 
-    BasicBurger(){
-        super("Basic Burger",3.56,4);
-        this.rollType = "White Roll";
+    public DeluxeBurger(){
+        super("Deluxe Burger",8.12,2);
+        this.rollType = "Sousage";
     }
 
     public String getRollType() {

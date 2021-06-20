@@ -1,3 +1,8 @@
+package controller;
+
+import model.Burger;
+import model.Topping;
+
 import java.util.ArrayList;
 import java.util.Scanner;
 
@@ -7,7 +12,7 @@ public class Restaurant {
     private static ArrayList<Burger> allBurgers;
     private static ArrayList<Topping> allToppings;
 
-    Restaurant(){
+    public Restaurant(){
         allBurgers = Fridge.prepareBurgers();
         allToppings = Fridge.prepareToppings();
     }
@@ -16,15 +21,7 @@ public class Restaurant {
         return allBurgers;
     }
 
-    public static void displayToppings(){
-        System.out.println("\nPlease add some toppings");
-
-        int i = 1;
-        for (Topping topping : allToppings) {
-            System.out.println(i+". \t"+topping);
-            i++;
-        }
-    }
+    public static ArrayList<Topping> getToppings(){return allToppings; }
 
     public static Burger selectBurger(){
         Burger burger;

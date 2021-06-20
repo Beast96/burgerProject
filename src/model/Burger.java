@@ -1,3 +1,5 @@
+package model;
+
 import java.util.ArrayList;
 
 public class Burger {
@@ -6,7 +8,7 @@ public class Burger {
     private int maxToppings;
     private ArrayList<Topping> toppings = new ArrayList<>();
 
-    Burger (String name, Double price, int maxToppings){
+    public Burger (String name, Double price, int maxToppings){
         this.name = name;
         this.price = price;
         this.maxToppings = maxToppings;

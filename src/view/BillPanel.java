@@ -10,6 +10,8 @@ import java.awt.*;
 public class BillPanel extends JPanel {
     private Burger burger;
     BillPanel(){
+        setBackground(Color.white);
+        setBorder(BorderFactory.createLineBorder(Color.BLACK,5));
     }
     public void setBurger(Burger burger){
         this.burger=burger;

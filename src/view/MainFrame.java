@@ -25,7 +25,8 @@ public class MainFrame extends JFrame {
         billPanel = new BillPanel();
         burgerPanel.setBackground(Color.BLUE);
         toppingsPanel.setBackground(Color.RED);
-//        toppingsPanel.setVisible(false);
+        toppingsPanel.setVisible(false);
+        billPanel.setVisible(false);
 
         setLayout(new BorderLayout());
         JPanel tmp = new JPanel();
@@ -47,6 +48,8 @@ public class MainFrame extends JFrame {
             @Override
             public void sendBurger(Burger burger) {
                 billPanel.setBurger(burger);
+                billPanel.setVisible(true);
+
             }
         });
     }

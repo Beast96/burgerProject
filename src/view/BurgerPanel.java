@@ -19,12 +19,13 @@ public class BurgerPanel extends JPanel implements ActionListener {
     BurgerPanel(ArrayList<Burger> burgers){
         this.burgers=burgers;
         font = new Font("Comic Sans MS", Font.BOLD, 20);
-        heading = new JLabel("Please Select a Burger");
+        heading = new JLabel("Brampton Burgers");
         heading.setFont (font);
         burgersBtn = new ArrayList<>();
         burgerGrp = new ButtonGroup();
         setSize(getPreferredSize());
         setLayout(new GridBagLayout());
+        setBackground(Color.white);
 
         GridBagConstraints gc = new GridBagConstraints();
 
@@ -32,12 +33,11 @@ public class BurgerPanel extends JPanel implements ActionListener {
         gc.gridy = 0;
         gc.weighty=0.5;
 
-        //        First Row
+        //        0th Row
         gc.anchor = GridBagConstraints.CENTER;
         add(heading,gc);
 
         // 2nd Row
-        gc.gridx=1;
         gc.gridy++;
         gc.anchor = GridBagConstraints.CENTER;
         for(Burger b: burgers){
@@ -59,15 +59,16 @@ public class BurgerPanel extends JPanel implements ActionListener {
     @Override
     protected void paintComponent(Graphics g) {
         super.paintComponent(g);
-        Graphics2D g2d = (Graphics2D) g;
-        g2d.setRenderingHint(RenderingHints.KEY_RENDERING, RenderingHints.VALUE_RENDER_QUALITY);
-        int w = getWidth();
-        int h = getHeight();
-        Color color1 = new Color(134, 168, 255);
-        Color color2 = new Color(134,168,255, 102);
-        GradientPaint gp = new GradientPaint(0, 0, color1, 0, h, color2);
-        g2d.setPaint(gp);
-        g2d.fillRect(0, 0, w, h);    }
+//        Graphics2D g2d = (Graphics2D) g;
+//        g2d.setRenderingHint(RenderingHints.KEY_RENDERING, RenderingHints.VALUE_RENDER_QUALITY);
+//        int w = getWidth();
+//        int h = getHeight();
+//        Color color1 = new Color(134, 168, 255);
+//        Color color2 = new Color(134,168,255, 102);
+//        GradientPaint gp = new GradientPaint(0, 0, color1, 0, h, color2);
+//        g2d.setPaint(gp);
+//        g2d.fillRect(0, 0, w, h);
+    }
 
     @Override
     public void actionPerformed(ActionEvent e) {

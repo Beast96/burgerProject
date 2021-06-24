@@ -44,6 +44,7 @@ public class ToppingPanel extends JPanel implements ActionListener {
         orderNowBtn.addActionListener(this);
 
         setLayout(new GridBagLayout());
+        setBackground(Color.white);
         GridBagConstraints gc = new GridBagConstraints();
         gc.gridx=1;
         gc.gridy=0;
@@ -115,15 +116,16 @@ public class ToppingPanel extends JPanel implements ActionListener {
     @Override
     protected void paintComponent(Graphics g) {
         super.paintComponent(g);
-        Graphics2D g2d = (Graphics2D) g;
-        g2d.setRenderingHint(RenderingHints.KEY_RENDERING, RenderingHints.VALUE_RENDER_QUALITY);
-        int w = getWidth();
-        int h = getHeight();
-        Color color1 = new Color(134, 168, 255);
-        Color color2 = new Color(255, 255,255, 255);
-        GradientPaint gp = new GradientPaint(0, 0, color1, 0, h, color2);
-        g2d.setPaint(gp);
-        g2d.fillRect(0, 0, w, h);    }
+//        Graphics2D g2d = (Graphics2D) g;
+//        g2d.setRenderingHint(RenderingHints.KEY_RENDERING, RenderingHints.VALUE_RENDER_QUALITY);
+//        int w = getWidth();
+//        int h = getHeight();
+//        Color color1 = new Color(134, 168, 255);
+//        Color color2 = new Color(255, 255,255, 255);
+//        GradientPaint gp = new GradientPaint(0, 0, color1, 0, h, color2);
+//        g2d.setPaint(gp);
+//        g2d.fillRect(0, 0, w, h);
+    }
 
     @Override
     public void actionPerformed(ActionEvent e) {

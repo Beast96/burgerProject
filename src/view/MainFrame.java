@@ -23,8 +23,6 @@ public class MainFrame extends JFrame {
         burgerPanel =  new BurgerPanel(Restaurant.getBurgers());
         toppingsPanel = new ToppingPanel(Restaurant.getToppings());
         billPanel = new BillPanel();
-        burgerPanel.setBackground(Color.BLUE);
-        toppingsPanel.setBackground(Color.RED);
         toppingsPanel.setVisible(false);
         billPanel.setVisible(false);
 
